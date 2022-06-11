@@ -26,5 +26,5 @@
     "eslint-plugin-vue": "7.19.1",
     "sass": "1.32.4",
     "vite": "2.6.10"
-  }
+  },"rules": {"vue/no-multiple-template-root": "off" }
 }

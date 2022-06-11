@@ -1,4 +1,6 @@
 <template>
+<div>
+
   <header>
     <Navbar />
   </header>
@@ -10,6 +12,7 @@
       Made with 💖 by CodeWorks
     </div>
   </footer>
+      </div>
 </template>
 
 <script>
