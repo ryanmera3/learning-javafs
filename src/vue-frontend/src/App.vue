@@ -1,29 +1,30 @@
 <template>
-<div id="app">
-  <Employee/>
-</div>
-
+  <header>
+    <Navbar />
+  </header>
+  <main>
+    <router-view />
+  </main>
+  <footer>
+    <div class="bg-dark text-light text-center p-4">
+      Made with 💖 by CodeWorks
+    </div>
+  </footer>
 </template>
 
 <script>
-
-import Employee from "./components/Employee.vue"
-
+import { computed } from 'vue'
+import { AppState } from './AppState'
 export default {
   name: 'App',
-  components: {
-    Employee
+  setup() {
+    return {
+      appState: computed(() => AppState)
+    }
   }
 }
 </script>
+<style lang="scss">
+@import "./assets/scss/main.scss";
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

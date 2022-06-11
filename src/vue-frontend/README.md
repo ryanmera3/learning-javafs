@@ -1,24 +1,16 @@
-# vue-frontend
+CodeWorks Vue Starter
+=====================
+This template is designed to help get students started building vue applications
 
-## Project setup
-```
-npm install
-```
+## Legal Overview
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+The content under the CodeWorks®, LLC Organization and all of the individual repos are solely intended for use by CodeWorks Instruction to deliver Educational content to CodeWorks Students.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+---
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Copyright
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+© CodeWorks® LLC, 2021. Unauthorized use and/or duplication of this material without express and written permission from CodeWorks, LLC is strictly prohibited.
+
+
+<img src="https://bcw.blob.core.windows.net/public/img/7815839041305055" width="125">

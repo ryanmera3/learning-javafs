@@ -69,7 +69,7 @@ FROM
   JOIN vaults v ON v.id = vk.vaultId
 WHERE
   vk.vaultId = 65;
-  
+
 SELECT
   vk.*
 FROM
@@ -98,6 +98,11 @@ SELECT
 
 SELECT id, name, picture FROM accounts WHERE id = "61cc69e8955b2a8b17de965c";
 -- INSERT --
+INSERT INTO 
+  accounts(id, name, picture, email)
+VALUES
+  (1, "Ryan", "Empty", "Ryanmera@test.test");
+
 INSERT INTO
   keeps (id, name, description, img)
 VALUES
