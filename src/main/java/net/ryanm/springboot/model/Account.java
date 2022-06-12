@@ -2,12 +2,15 @@ package net.ryanm.springboot.model;
 
 import javax.persistence.*;
 
+import org.hibernate.annotations.GenericGenerator;
+
 @Entity
 @Table(name = "accounts")
 public class Account {
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  public long id;
+  @GeneratedValue(generator = "uuid")
+  @GenericGenerator(name = "uuid", strategy = "uuid2")
+  private String id;
 
   @Column(name = "name", nullable = false)
   public String name;
@@ -26,7 +29,7 @@ public class Account {
     this.picture = picture;
     this.email = email;
   }
-  public long getId(){
+  public String getId(){
     return id;
   }
 
