@@ -30,7 +30,7 @@ public class AccountController {
   @Autowired
   AccountRepository accountRepository;
 
-
+  // Get request that returns an array of all objects in the account table
   @GetMapping("/accounts")
   public ResponseEntity<List<Account>> getAllAccounts(@RequestParam(required = false) String name){
     try {
@@ -49,10 +49,11 @@ public class AccountController {
     }
   }
 
-
+  // Get request that returns a single account object based on it's ID
   @GetMapping("/accounts/{id}")
   public ResponseEntity<Account> getAccountById(@PathVariable("id") long id){
       Optional<Account> accountData = accountRepository.findById(id);
+      // If an account is found it will return an account object - If it's not present it will return 404
       if(accountData.isPresent()){
         return new ResponseEntity<>(accountData.get(), HttpStatus.OK);
       } else {
@@ -61,6 +62,7 @@ public class AccountController {
 
   }
 
+  // Post request to create an account - JSON needs to contain name, picture, email
   @PostMapping("/accounts")
   public ResponseEntity<Account> createAccount(@RequestBody Account account) {
     try {
@@ -72,9 +74,12 @@ public class AccountController {
     }
   }
   
+
+  // Put request to edit one account based on it's ID - JSON needs to contain new information for the account
   @PutMapping("/accounts/{id}")
   public ResponseEntity<Account> updateAccount(@PathVariable("id") long id, @RequestBody Account account) {
     Optional<Account> accountData = accountRepository.findById(id);
+    // Checks if the account exists before attempting to edit an account - returns 404 if no account matches ID
     if(accountData.isPresent()){
       Account _account = accountData.get();
       _account.setName(account.getName());
@@ -86,6 +91,7 @@ public class AccountController {
     }
   }
 
+  // Delete request to delete one account based on it's ID
   @DeleteMapping("/accounts/{id}")
   public ResponseEntity<HttpStatus> deleteAccount(@PathVariable("id") long id){
     try {
@@ -96,6 +102,6 @@ public class AccountController {
     }
   }
 
-  
+
 
 }
