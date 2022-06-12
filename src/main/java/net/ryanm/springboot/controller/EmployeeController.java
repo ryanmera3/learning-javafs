@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.ryanm.springboot.entity.Employee;
+import net.ryanm.springboot.model.Employee;
 import net.ryanm.springboot.repository.EmployeeRepository;
 
 @RestController

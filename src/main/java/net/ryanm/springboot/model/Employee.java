@@ -1,4 +1,4 @@
-package net.ryanm.springboot.entity;
+package net.ryanm.springboot.model;
 
 import javax.persistence.*;
 
